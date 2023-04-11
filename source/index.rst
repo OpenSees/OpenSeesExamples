@@ -14,17 +14,62 @@ This document provides examples ranging from the simple to convoluted!
 .. _introductoryStructuralExamples:
 
 .. toctree::
-   :caption: Introductory Structural Examples
-   :maxdepth: 1
-   :numbered: 1
-
-   introductoryStructural/elasticCantileverColumnPushover/example
-   introductoryStructural/elasticCantileverColumnDynamicEarthquake/example
-
-.. _simpleNonlinearStructuralExamples:
-
-.. toctree::
-   :caption: Simple Nonlinear Structural Examples
+   :caption: Simple Elastic Structural Examples
    :maxdepth: 2
    :numbered: 2
+
+   introductoryStructural/elasticTruss/basicTruss
+   introductoryStructural/elasticCantileverColumn/elasticColumn
+
+
+.. toctree::
+   :caption: Nonlinear Structural Examples
+   :maxdepth: 2
+   :numbered: 2
+
+   nonlinearStructural/2dFrame33/frame
+
+   
+.. |cantilever3| image:: ./introductoryStructural/elasticCantileverColumn/figures/elasticCantileverColumn.png 
+   :width: 150pt
+   :height: 300pt
+	    
+OpenSees Example 2b. Nonlinear Cantilever Column: Uniaxial Inelastic Section
+
+.. list-table:: 
+   :class: borderless
+
+   * - |cantilever3|
+     - first example of nonlinear model, set nonlinearity at section level
+     - Models:
+	     * nonlinearBeamColumn element
+	     * unixial section
+     - Analysis:
+	     * static pushover
+	     * dynamic earthquake input
+
+
+
+2D Frame 3 Stories, 3 Bays
+
+.. list-table:: 
+   :class: borderless
+
+   * - |cantilever3|
+     - Objectives
+             * 2D frame of fixed geometry: 3-story, 3-bay
+	     * nodes and elements are defined manually, one by one
+     - Models:
+	     * Reinforced-Concrete Section
+	     * Steel W-Section
+	     * Elastic uniaxial section
+             * Inelastic uniaxial section
+             * Inelastic fiber section
+     - Analysis:
+             * Static reversed cyclic analysis
+	     * Dynamic sine-wave input analysis (uniform excitation)
+	     * Dynamic earthquake-input analysis (uniform excitation)
+	     * Dynamic sine-wave input analysis (multiple-support excitation)
+	     * Dynamic earthquake-input analysis (multiple-support excitation)
+	     * Dynamic bidirectional earthquake-input analysis (uniform excitation)
 
